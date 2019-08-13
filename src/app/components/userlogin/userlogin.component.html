@@ -1,0 +1,25 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 offset-md-4 col-lg-4 offset-lg-4 col-sm-8 offset-sm-2 col-xs-12">
+        <form #formCtrl="ngForm" novalidate>
+            <!--Email Validator-->
+            <input type="text" maxlength="31" name="email" #email="ngModel" [(ngModel)]="userLoginCreds.username" pInputText placeholder="Email" pattern="^[A-Za-z0-9]+(\.[A-Za-z0-9]+)*@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*(\.[A-Za-z]{2,4})$" required/>
+            <div class="text-center">
+                <p class="error" [hidden]="email.untouched" *ngIf="email.errors && email.errors.pattern">Please Enter Valid Email Id</p>
+            </div>
+            <br>
+            <input type="password" name="password" value="" autocomplete="off" #password="ngModel" [(ngModel)]="userLoginCreds.password" pInputText placeholder="Password" pattern="^[^\s]{6,}" required/>
+            <br>
+            <button *ngIf="!spinner" class="ui-button-info" (click)="signIn()" [disabled]="password.errors||email.errors" type="submit" label="Login">Login</button>
+            <button *ngIf="spinner" class="ui-button-info" icon="fa fa-circle-o-notch fa-spin fa-forward" type="submit">Logging ...</button>
+            <br>
+            <br>
+            <span id="lostpassword"><a (click)="forgotPassword()">Forgot Password?</a></span><br>
+        </form>
+
+    </div>
+  </div>
+  
+</div>
