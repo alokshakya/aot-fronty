@@ -1,6 +1,6 @@
-export const OLYMPIADBOX_INSTANCE_URL: string = 'http://scripts.olympiadbox.com/services/fronty-api';
+// export const OLYMPIADBOX_INSTANCE_URL: string = 'http://scripts.olympiadbox.com/services/fronty-api';
 
-// export const OLYMPIADBOX_INSTANCE_URL: string = 'http://localhost/backy-api';
+export const OLYMPIADBOX_INSTANCE_URL: string = 'http://www.swastickbookbox.com/backy-api';
 
 // export const OLYMPIADBOX_INSTANCE_URL: string = 'http://52.90.250.106/backy-api/index.php';
 
