@@ -48,7 +48,7 @@ import { AccountGuard, TestAccountGuard, TestDeactivate} from './account.guard';
 
 const routes: Routes = [
 
-  {path:'account', component: AccountMainComponent, canActivate:[AccountGuard], children:[
+  {path:'', component: AccountMainComponent, canActivate:[AccountGuard], children:[
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent, },
             { path: 'subscribe', component: SubscribeComponent },
@@ -94,7 +94,7 @@ const routes: Routes = [
 
             {path:'', redirectTo:'dashboard', pathMatch:'full'}
   ]},
-  {path:'', redirectTo:'account', pathMatch:'full'}
+//   {path:'', redirectTo:'account', pathMatch:'full'}
 ];
 
 @NgModule({

@@ -1,4 +1,5 @@
-import { AppRoutes } from './app.routes';
+// import { AppRoutes } from './app.routes';
+import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -13,19 +14,20 @@ import { MatButtonModule } from '@angular/material';
 
 //Default theme Components
 import { AppComponent } from './app.component';
-import { AppMenuComponent, AppSubMenu } from './components/account/main/main.menu.component';
-import { AppTopBar } from './components/account/apptopbar/app.topbar.component';
-import { AppFooter } from './components/account/appfooter/app.footer.component';
-import { InlineProfileComponent } from './components/account/appProfile/app.profile.component';
+// import { AppMenuComponent, AppSubMenu } from './components/account/main/main.menu.component';
+// import { AppTopBar } from './components/account/apptopbar/app.topbar.component';
+// import { AppFooter } from './components/account/appfooter/app.footer.component';
+// import { InlineProfileComponent } from './components/account/appProfile/app.profile.component';
 
 
 //Added Components
-import { AccountMainComponent } from "./components/account/main/main.component";
-import { DashboardComponent } from './components/account/dashboard/dashboard.component';
-import { SubscribeComponent } from './components/account/subscribe/subscribe.component';
+// import { AccountMainComponent } from "./components/account/main/main.component";
+// import { DashboardComponent } from './components/account/dashboard/dashboard.component';
+import { SharedComponentsModule } from './shared-components/shared-components.module';
 
 
-import { ProfileComponent } from './components/account/profile/profile.component';
+
+// import { ProfileComponent } from './components/account/profile/profile.component';
 import { LoginComponent } from './components/login/login.component';
 import { TestComponent } from './components/test/test.component';
 import { LoadoutComponent } from './components/account/loadout/loadout.component';
@@ -45,43 +47,76 @@ import { AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard } from '.
 
 //pipes
 import { KeysPipe } from './pipes/keys.pipe';
-import { CssIdPipe } from './pipes/css-id.pipe';
+// import { CssIdPipe } from './pipes/css-id.pipe';
 
+// import { RoundPipe } from './pipes/round.pipe';
 
-import {MathJaxDirective} from './directives/mathjax.directive';
-import { RoundPipe } from './pipes/round.pipe';
+import { GrowlModule } from 'primeng/primeng'; // this is being used in appcomponent html
+import { DialogModule } from 'primeng/primeng';
+import { FileUploadModule } from 'primeng/primeng';
+import { TooltipModule } from 'primeng/primeng';
+import { PanelModule } from 'primeng/primeng';
+import { OverlayPanelModule } from 'primeng/primeng';
+import { PanelMenuModule } from 'primeng/primeng';
+import { TabViewModule } from 'primeng/primeng';
+import { RatingModule } from 'primeng/primeng';
+import { ConfirmDialogModule } from 'primeng/primeng';
+import { DataTableModule } from 'primeng/primeng';
+import { InputMaskModule } from 'primeng/primeng';
+import { CalendarModule } from 'primeng/primeng';
+import { RadioButtonModule } from 'primeng/primeng';
+import { DropdownModule } from 'primeng/primeng';
+import { CheckboxModule } from 'primeng/primeng';
+import { CaptchaModule } from 'primeng/primeng';
+import { PasswordModule } from 'primeng/primeng';
+import { ProgressSpinnerModule } from 'primeng/primeng';
+import { ChartModule } from 'primeng/primeng';
 @NgModule({
     imports: [
         BrowserModule,
         BrowserAnimationsModule, //new
         FormsModule,
-        AppRoutes,
+        AppRoutingModule,
         HttpModule,
-        MatButtonModule
+        MatButtonModule,
+        GrowlModule,
+        DialogModule,
+        FileUploadModule,
+        TooltipModule,
+        PanelModule,
+        OverlayPanelModule,
+        PanelMenuModule,
+        TabViewModule,
+        RatingModule,
+        ConfirmDialogModule,
+        DataTableModule,
+        InputMaskModule,
+        CalendarModule,
+        RadioButtonModule,
+        DropdownModule,
+        CheckboxModule,
+        CaptchaModule,
+        PasswordModule,
+        ProgressSpinnerModule,
+        ChartModule,
+        SharedComponentsModule,
         //MomentModule //Moment
 
     ],
     declarations: [
         AppComponent,
-        AppMenuComponent,
-        AppSubMenu,
-        AppTopBar,
-        AppFooter,
-        InlineProfileComponent,
-        AccountMainComponent,
-        DashboardComponent,
-        SubscribeComponent,
+        // AppMenuComponent,
+        // AppSubMenu,
+        // AppTopBar,
+        // AppFooter,
+        // InlineProfileComponent,
+        // AccountMainComponent,
+        // DashboardComponent,
         LoadoutComponent,
-        ProfileComponent,
         LoginComponent,
         TestComponent,
         SubscriptionComponent,
-
-        KeysPipe,
-        CssIdPipe,
-        RoundPipe,
-
-        MathJaxDirective
+        KeysPipe
     
     ],
     providers: [

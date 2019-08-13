@@ -14,7 +14,6 @@ import { SampletestEnglishComponent } from './english/sampletest/sampletest-engl
 import { MocktestEnglishComponent } from './english/mocktest/mocktest-english.component';
 import { ResultEnglishComponent } from './english/result/result-english.component';
 
-
 import { ChapterwisetestScienceComponent } from './science/chapterwisetest/chapterwisetest-science.component';
 import { DemotestScienceComponent } from './science/demotest/demotest-science.component';
 import { MocktestScienceComponent } from './science/mocktest/mocktest-science.component';
@@ -41,9 +40,23 @@ import { ResultReasoningComponent } from './reasoning/result/result-reasoning.co
 
 import { CreateticketComponent } from '../../components/support/createticket/createticket.component';
 import { ViewticketComponent } from '../../components/support/viewticket/viewticket.component';
+
+import { SubscribeComponent } from './subscribe/subscribe.component';
+import { SharedComponentsModule } from '././../../shared-components/shared-components.module';
+
+import { AccountGuard, TestAccountGuard, TestDeactivate} from './account.guard';
+import { ProfileComponent } from './profile/profile.component';
+// add account-routing module for routing of all components
+import { AccountRoutingModule } from './account-routing.module';
+//import AppPrimeNgModule to add all prime ng modules
+import { AppPrimeNgModule } from '../../app-prime-ng/app-prime-ng.module';
+
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    AppPrimeNgModule,
+    AccountRoutingModule,
+    SharedComponentsModule
   ],
   declarations: [
     ChapterwisetestComputersComponent,
@@ -76,12 +89,17 @@ import { ViewticketComponent } from '../../components/support/viewticket/viewtic
     MocktestGkComponent,
     DemotestGkComponent,
     ResultGkComponent,
-    
+
     ChapterwisetestReasoningComponent,
     DemotestReasoningComponent,
     ResultReasoningComponent,
     CreateticketComponent,
-    ViewticketComponent
-  ]
+    ViewticketComponent,
+    SubscribeComponent,
+    ProfileComponent
+  ],
+  providers: [
+    AccountGuard, TestAccountGuard, TestDeactivate 
+],
 })
 export class AccountModule { }
