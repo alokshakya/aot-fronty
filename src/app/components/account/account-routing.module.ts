@@ -48,7 +48,7 @@ import { AccountGuard, TestAccountGuard, TestDeactivate} from './account.guard';
 
 const routes: Routes = [
 
-  {path:'', component: AccountMainComponent, canActivate:[AccountGuard], children:[
+  {path:'', component: AccountMainComponent, children:[
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: DashboardComponent, },
             { path: 'subscribe', component: SubscribeComponent },

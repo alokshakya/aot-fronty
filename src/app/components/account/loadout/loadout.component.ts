@@ -43,10 +43,11 @@ export class LoadoutComponent implements OnInit {
                 let previousRoute = sessionStorage.getItem('route');
                 this.changeTheme(this.personalInfo.userInfo['gender']);
                 if(previousRoute!=null){
+                    this.router.navigate([previousRoute]);
                     // if(this.personalInfo.userInfo.email_verified==1&&this.personalInfo.userInfo.mobile_verified==1){
-                        setTimeout(()=>{
-                            this.router.navigate([previousRoute]);
-                        },800)
+                        // setTimeout(()=>{
+                        //     this.router.navigate([previousRoute]);
+                        // },)
                     // }
                     // else this.router.navigate(['account']);
                 }

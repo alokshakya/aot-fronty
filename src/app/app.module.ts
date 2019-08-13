@@ -23,17 +23,17 @@ import { AppComponent } from './app.component';
 //Added Components
 // import { AccountMainComponent } from "./components/account/main/main.component";
 // import { DashboardComponent } from './components/account/dashboard/dashboard.component';
-import { SharedComponentsModule } from './shared-components/shared-components.module';
+// import { SharedComponentsModule } from './shared-components/shared-components.module';
 
 
 
 // import { ProfileComponent } from './components/account/profile/profile.component';
-import { LoginComponent } from './components/login/login.component';
-import { TestComponent } from './components/test/test.component';
+// import { LoginComponent } from './components/login/login.component';
+// import { TestComponent } from './components/test/test.component';
 import { LoadoutComponent } from './components/account/loadout/loadout.component';
-import { SubscriptionComponent } from './components/subscription/subscription.component';
+// import { SubscriptionComponent } from './components/subscription/subscription.component';
 //services
-import { ConfirmationService } from 'primeng/primeng';
+// import { ConfirmationService } from 'primeng/primeng';
 import { LoginRegisterService } from './services/loginRegister.service';
 import { EventService } from './services/event.service';
 import { MasterHttpService } from './services/masterhttp.service';
@@ -46,31 +46,33 @@ import { AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard } from '.
 // import { MomentModule } from 'angular2-moment';
 
 //pipes
-import { KeysPipe } from './pipes/keys.pipe';
+// import { KeysPipe } from './pipes/keys.pipe';
 // import { CssIdPipe } from './pipes/css-id.pipe';
 
 // import { RoundPipe } from './pipes/round.pipe';
 
-import { GrowlModule } from 'primeng/primeng'; // this is being used in appcomponent html
-import { DialogModule } from 'primeng/primeng';
-import { FileUploadModule } from 'primeng/primeng';
-import { TooltipModule } from 'primeng/primeng';
-import { PanelModule } from 'primeng/primeng';
-import { OverlayPanelModule } from 'primeng/primeng';
-import { PanelMenuModule } from 'primeng/primeng';
-import { TabViewModule } from 'primeng/primeng';
-import { RatingModule } from 'primeng/primeng';
-import { ConfirmDialogModule } from 'primeng/primeng';
-import { DataTableModule } from 'primeng/primeng';
-import { InputMaskModule } from 'primeng/primeng';
-import { CalendarModule } from 'primeng/primeng';
-import { RadioButtonModule } from 'primeng/primeng';
-import { DropdownModule } from 'primeng/primeng';
-import { CheckboxModule } from 'primeng/primeng';
-import { CaptchaModule } from 'primeng/primeng';
-import { PasswordModule } from 'primeng/primeng';
-import { ProgressSpinnerModule } from 'primeng/primeng';
-import { ChartModule } from 'primeng/primeng';
+// import { GrowlModule } from 'primeng/primeng'; // this is being used in appcomponent html
+// import { DialogModule } from 'primeng/primeng';
+// import { FileUploadModule } from 'primeng/primeng';
+// import { TooltipModule } from 'primeng/primeng';
+// import { PanelModule } from 'primeng/primeng';
+// import { OverlayPanelModule } from 'primeng/primeng';
+// import { PanelMenuModule } from 'primeng/primeng';
+// import { TabViewModule } from 'primeng/primeng';
+// import { RatingModule } from 'primeng/primeng';
+// import { ConfirmDialogModule } from 'primeng/primeng';
+// import { DataTableModule } from 'primeng/primeng';
+// import { InputMaskModule } from 'primeng/primeng';
+// import { CalendarModule } from 'primeng/primeng';
+// import { RadioButtonModule } from 'primeng/primeng';
+// import { DropdownModule } from 'primeng/primeng';
+// import { CheckboxModule } from 'primeng/primeng';
+// import { CaptchaModule } from 'primeng/primeng';
+// import { PasswordModule } from 'primeng/primeng';
+// import { ProgressSpinnerModule } from 'primeng/primeng';
+// import { ChartModule } from 'primeng/primeng';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { UserloginComponent } from './components/userlogin/userlogin.component';
 @NgModule({
     imports: [
         BrowserModule,
@@ -79,28 +81,28 @@ import { ChartModule } from 'primeng/primeng';
         AppRoutingModule,
         HttpModule,
         MatButtonModule,
-        GrowlModule,
-        DialogModule,
-        FileUploadModule,
-        TooltipModule,
-        PanelModule,
-        OverlayPanelModule,
-        PanelMenuModule,
-        TabViewModule,
-        RatingModule,
-        ConfirmDialogModule,
-        DataTableModule,
-        InputMaskModule,
-        CalendarModule,
-        RadioButtonModule,
-        DropdownModule,
-        CheckboxModule,
-        CaptchaModule,
-        PasswordModule,
-        ProgressSpinnerModule,
-        ChartModule,
-        SharedComponentsModule,
-        //MomentModule //Moment
+        // GrowlModule,
+        // DialogModule,
+        // FileUploadModule,
+        // TooltipModule,
+        // PanelModule,
+        // OverlayPanelModule,
+        // PanelMenuModule,
+        // TabViewModule,
+        // RatingModule,
+        // ConfirmDialogModule,
+        // DataTableModule,
+        // InputMaskModule,
+        // CalendarModule,
+        // RadioButtonModule,
+        // DropdownModule,
+        // CheckboxModule,
+        // CaptchaModule,
+        // PasswordModule,
+        // ProgressSpinnerModule,
+        // ChartModule,
+        // SharedComponentsModule,
+        // //MomentModule //Moment
 
     ],
     declarations: [
@@ -113,17 +115,19 @@ import { ChartModule } from 'primeng/primeng';
         // AccountMainComponent,
         // DashboardComponent,
         LoadoutComponent,
-        LoginComponent,
-        TestComponent,
-        SubscriptionComponent,
-        KeysPipe
+        // LoginComponent,
+        // TestComponent,
+        // SubscriptionComponent,
+        // KeysPipe,
+        DashboardComponent,
+        UserloginComponent
     
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         LoginRegisterService,
         MasterHttpService,
-        ConfirmationService,
+        // ConfirmationService,
         PersonalInfo, SubjectInfo, Result, Misc, chapterwiseTest, 
         AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard,
         EventService

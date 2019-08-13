@@ -118,8 +118,6 @@ export class LoginComponent implements OnInit {
         if(token!=null){
             this.masterhttp.setToken(token);
             if(previousRoute!=null){
-                alert('previous router in loggedIn check function');
-                alert(previousRoute);
                 this.router.navigate([previousRoute]);
             }
         }
