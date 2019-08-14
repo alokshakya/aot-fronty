@@ -42,6 +42,9 @@ import { CreateticketComponent } from '../../components/support/createticket/cre
 import { ViewticketComponent } from '../../components/support/viewticket/viewticket.component';
 
 import { SubscribeComponent } from './subscribe/subscribe.component';
+import { TestComponent } from '../test/test.component';
+import { LoginComponent } from '../login/login.component';
+import { SubscriptionComponent } from '../subscription/subscription.component';
 import { SharedComponentsModule } from '././../../shared-components/shared-components.module';
 
 import { AccountGuard, TestAccountGuard, TestDeactivate} from './account.guard';
@@ -50,6 +53,11 @@ import { ProfileComponent } from './profile/profile.component';
 import { AccountRoutingModule } from './account-routing.module';
 //import AppPrimeNgModule to add all prime ng modules
 import { AppPrimeNgModule } from '../../app-prime-ng/app-prime-ng.module';
+
+// import { KeysPipe } from '../../pipes/keys.pipe';
+// import { CssIdPipe } from '../../pipes/css-id.pipe';
+
+// import { RoundPipe } from '../../pipes/round.pipe';
 
 @NgModule({
   imports: [
@@ -96,7 +104,13 @@ import { AppPrimeNgModule } from '../../app-prime-ng/app-prime-ng.module';
     CreateticketComponent,
     ViewticketComponent,
     SubscribeComponent,
-    ProfileComponent
+    ProfileComponent,
+    TestComponent,
+    LoginComponent,
+    SubscriptionComponent,
+    // KeysPipe,
+    // CssIdPipe,
+    // RoundPipe
   ],
   providers: [
     AccountGuard, TestAccountGuard, TestDeactivate 
