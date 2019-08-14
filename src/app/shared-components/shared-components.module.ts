@@ -12,6 +12,7 @@ import { DashboardComponent } from '../components/account/dashboard/dashboard.co
 import {MathJaxDirective} from '../directives/mathjax.directive';
 import { CssIdPipe } from '../pipes/css-id.pipe';
 import { RoundPipe } from '../pipes/round.pipe';
+import { KeysPipe } from '../pipes/keys.pipe';
 @NgModule({
   imports: [
     CommonModule,
@@ -28,6 +29,7 @@ import { RoundPipe } from '../pipes/round.pipe';
     DashboardComponent,
     CssIdPipe,
     RoundPipe,
+    KeysPipe,
     MathJaxDirective
   ],
   exports:[
@@ -38,8 +40,7 @@ import { RoundPipe } from '../pipes/round.pipe';
     InlineProfileComponent,
     AccountMainComponent,
     DashboardComponent,
-    CssIdPipe,
-    RoundPipe,
+    
     MathJaxDirective
   ]
 })
