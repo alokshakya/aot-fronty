@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
-import { CustomPreloading } from './custom-preloading.module'
+
 // import { LoginComponent } from './components/login/login.component';
 import { LoadoutComponent } from './components/account/loadout/loadout.component';
 // import { AccountMainComponent } from "./components/account/main/main.component";
