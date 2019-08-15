@@ -20,6 +20,10 @@ const routes: Routes = [
     loadChildren: './components/account/account.module#AccountModule'
   },
   {
+    path: 'test',
+    loadChildren: './components/test/test.module#TestModule'
+  },
+  {
     path: '',
     redirectTo:'login',
     pathMatch: 'full'
