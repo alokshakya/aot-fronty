@@ -13,8 +13,8 @@
             </a>
             
         <ul id="breadcrumb" *ngIf="!app.isMobile()&&personalInfo.userInfo.gender=='Male'">
-          <li [routerLink]="['/account/dashboard']"><a href="#"><i class="fa fa-home fa-lg"></i></a></li>
-          <li *ngIf="currentComponent[0]=='Science'"><a href="#"><i class="icon-science icon-2x"> &nbsp;</i><span> Science</span></a></li>
+          <li [routerLink]="['/account/dashboard']"><a href="#/account"><i class="fa fa-home fa-lg"></i></a></li>
+          <li *ngIf="currentComponent[0]=='Science'"><a href="#/account/science"><i class="icon-science icon-2x"> &nbsp;</i><span> Science</span></a></li>
           <li *ngIf="currentComponent[0]=='Computers'"><a href="#"><i class="icon-cyber icon-2x"> &nbsp;</i><span> Computers</span></a></li>
           <li *ngIf="currentComponent[0]=='Mathematics'"><a href="#"><i class="icon-maths icon-2x"> &nbsp;</i><span> Mathematics</span></a></li>
           <li *ngIf="currentComponent[0]=='General-Knowledge'"><a href="#"><i class="icon-gk icon-2x"> &nbsp;</i><span> General-Knowledge</span></a></li>
