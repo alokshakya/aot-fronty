@@ -42,12 +42,11 @@ import { CreateticketComponent } from '../../components/support/createticket/cre
 import { ViewticketComponent } from '../../components/support/viewticket/viewticket.component';
 
 import { SubscribeComponent } from './subscribe/subscribe.component';
-import { TestComponent } from '../test/test.component';
+
 import { LoginComponent } from '../login/login.component';
 import { SubscriptionComponent } from '../subscription/subscription.component';
 import { SharedComponentsModule } from '././../../shared-components/shared-components.module';
 
-import { AccountGuard, TestAccountGuard, TestDeactivate} from './account.guard';
 import { ProfileComponent } from './profile/profile.component';
 // add account-routing module for routing of all components
 import { AccountRoutingModule } from './account-routing.module';
@@ -58,6 +57,13 @@ import { AppPrimeNgModule } from '../../app-prime-ng/app-prime-ng.module';
 // import { CssIdPipe } from '../../pipes/css-id.pipe';
 
 // import { RoundPipe } from '../../pipes/round.pipe';
+
+import { LoginRegisterService } from '../../services/loginRegister.service';
+import { EventService } from '../../services/event.service';
+import { MasterHttpService } from '../../services/masterhttp.service';
+import { PersonalInfo, SubjectInfo, Result, Misc, chapterwiseTest } from '../../services/data.service';
+
+import { AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard } from '../account/account.guard';
 
 @NgModule({
   imports: [
@@ -105,7 +111,6 @@ import { AppPrimeNgModule } from '../../app-prime-ng/app-prime-ng.module';
     ViewticketComponent,
     SubscribeComponent,
     ProfileComponent,
-    TestComponent,
     LoginComponent,
     SubscriptionComponent,
     // KeysPipe,
@@ -113,7 +118,8 @@ import { AppPrimeNgModule } from '../../app-prime-ng/app-prime-ng.module';
     // RoundPipe
   ],
   providers: [
-    AccountGuard, TestAccountGuard, TestDeactivate 
+    AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard,
+    // MasterHttpService, PersonalInfo, SubjectInfo, Result, Misc, chapterwiseTest
 ],
 })
 export class AccountModule { }
