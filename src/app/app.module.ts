@@ -33,7 +33,7 @@ import { AppComponent } from './app.component';
 import { LoadoutComponent } from './components/account/loadout/loadout.component';
 // import { SubscriptionComponent } from './components/subscription/subscription.component';
 //services
-// import { ConfirmationService } from 'primeng/primeng';
+import { ConfirmationService } from 'primeng/primeng';
 import { LoginRegisterService } from './services/loginRegister.service';
 import { EventService } from './services/event.service';
 import { MasterHttpService } from './services/masterhttp.service';
@@ -127,7 +127,7 @@ import { UserloginComponent } from './components/userlogin/userlogin.component';
         { provide: LocationStrategy, useClass: HashLocationStrategy },
         LoginRegisterService,
         MasterHttpService,
-        // ConfirmationService,
+        ConfirmationService,
         PersonalInfo, SubjectInfo, Result, Misc, chapterwiseTest, 
         AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard,
         EventService
