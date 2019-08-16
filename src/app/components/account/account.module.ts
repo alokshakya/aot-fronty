@@ -43,6 +43,7 @@ import { ViewticketComponent } from '../../components/support/viewticket/viewtic
 
 import { SubscribeComponent } from './subscribe/subscribe.component';
 
+import { LoginComponent } from '../login/login.component';
 
 import { SharedComponentsModule } from '././../../shared-components/shared-components.module';
 
@@ -102,7 +103,8 @@ import { AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard } from '.
     CreateticketComponent,
     ViewticketComponent,
     SubscribeComponent,
-    ProfileComponent
+    ProfileComponent,
+    LoginComponent
   ],
   providers: [
     AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard,
