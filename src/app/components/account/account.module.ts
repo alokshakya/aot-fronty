@@ -43,7 +43,6 @@ import { ViewticketComponent } from '../../components/support/viewticket/viewtic
 
 import { SubscribeComponent } from './subscribe/subscribe.component';
 
-import { LoginComponent } from '../login/login.component';
 
 import { SharedComponentsModule } from '././../../shared-components/shared-components.module';
 
@@ -53,15 +52,8 @@ import { AccountRoutingModule } from './account-routing.module';
 //import AppPrimeNgModule to add all prime ng modules
 import { AppPrimeNgModule } from '../../app-prime-ng/app-prime-ng.module';
 
-// import { KeysPipe } from '../../pipes/keys.pipe';
-// import { CssIdPipe } from '../../pipes/css-id.pipe';
 
-// import { RoundPipe } from '../../pipes/round.pipe';
 
-import { LoginRegisterService } from '../../services/loginRegister.service';
-import { EventService } from '../../services/event.service';
-import { MasterHttpService } from '../../services/masterhttp.service';
-import { PersonalInfo, SubjectInfo, Result, Misc, chapterwiseTest } from '../../services/data.service';
 
 import { AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard } from '../account/account.guard';
 
@@ -110,12 +102,10 @@ import { AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard } from '.
     CreateticketComponent,
     ViewticketComponent,
     SubscribeComponent,
-    ProfileComponent,
-    LoginComponent
+    ProfileComponent
   ],
   providers: [
     AccountGuard, TestAccountGuard, TestDeactivate, verifiedGuard,
-    // MasterHttpService, PersonalInfo, SubjectInfo, Result, Misc, chapterwiseTest
 ],
 })
 export class AccountModule { }
