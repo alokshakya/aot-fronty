@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { TestComponent } from '../test/test.component';
-import { LoginComponent } from '../login/login.component';
-import { SubscriptionComponent } from '../subscription/subscription.component';
 import { SharedComponentsModule } from '././../../shared-components/shared-components.module';
 
 
