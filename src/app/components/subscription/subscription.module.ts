@@ -23,4 +23,4 @@ import { AppPrimeNgModule } from '../../app-prime-ng/app-prime-ng.module';
   providers: [
 ],
 })
-export class TestModule { }
+export class SubscriptionModule { }
