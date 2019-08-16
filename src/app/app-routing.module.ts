@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: './components/test/test.module#TestModule'
   },
   {
+    path: 'subscription',
+    loadChildren: './components/subscription/subscription.module#SubscriptionModule'
+  },
+  {
     path: '',
     redirectTo:'login',
     pathMatch: 'full'
